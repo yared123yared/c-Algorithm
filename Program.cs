@@ -25,12 +25,12 @@ using System.Xml.Serialization;
 namespace c_sharp {
     class Program {
 
-        private static void Filter (Dictionary<string, int> D) {
+        private static Dictionary<string, int> Solution (Dictionary<string, int> D) {
 
-            // filter out the dicitonary vaolues
+           
             var dict = new Dictionary<string, int> () { { "Monday", 0 }, { "Tuesday", 0 }, { "Wednesday", 0 }, { "Thursday", 0 }, { "Friday", 0 }, { "Saturday", 0 }, { "Sunday", 0 } };
 
-            // change the datetime to day format
+            
             foreach (var item in D) {
                 DateTime dt;
 
@@ -57,17 +57,14 @@ namespace c_sharp {
             }
          
 
-            foreach (KeyValuePair<string, int > day in dict) {
-                Console.Write ("{0}:{1} ,",
-                    day.Key, day.Value);
-            }
+           return dict;
 
         }
 
         static void Main (string[] args) {
             var D = new Dictionary<string, int> () { { "2020-4-13", 1 }, { "2020-4-14", 4 }, { "2020-4-15", 9 }, { "2020-4-16", 2 }, { "2020-4-17", 3 }, { "2020-4-19", 1 }, { "2020-4-20", 1 } };
             //
-            Filter (D);
+            Solution(D);
 
         }
 
