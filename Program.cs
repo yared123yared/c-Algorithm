@@ -25,7 +25,7 @@ using System.Xml.Serialization;
 namespace c_sharp {
     class Program {
 
-        private static Dictionary<string, int> Solution (Dictionary<string, int> D) {
+        public static  Dictionary<string, int> Solution (Dictionary<string, int> D) {
 
            
             var dict = new Dictionary<string, int> () { { "Monday", 0 }, { "Tuesday", 0 }, { "Wednesday", 0 }, { "Thursday", 0 }, { "Friday", 0 }, { "Saturday", 0 }, { "Sunday", 0 } };
@@ -61,10 +61,16 @@ namespace c_sharp {
 
         }
 
-        static void Main (string[] args) {
+        public static void Main (string[] args) {
             var D = new Dictionary<string, int> () { { "2020-4-13", 1 }, { "2020-4-14", 4 }, { "2020-4-15", 9 }, { "2020-4-16", 2 }, { "2020-4-17", 3 }, { "2020-4-19", 1 }, { "2020-4-20", 1 } };
             //
-            Solution(D);
+            var result=Solution(D);
+            foreach (var item in result){
+                Console.WriteLine("{0}:{1}",item.Key,item.Value);
+            }
+            {
+                
+            }
 
         }
 
