@@ -50,7 +50,7 @@ namespace c_sharp {
                     string noneValueDay = dict.ElementAt (i).Key;
                     int meanValue = ((dict.ElementAt (i - 1).Value + dict.ElementAt (i + 1).Value)) / 2;
                     dict[noneValueDay] = meanValue;
-                    Console.WriteLine (dict.ElementAt (i).Value);
+                    
 
                 }
 
@@ -69,7 +69,8 @@ namespace c_sharp {
             //
             var result=Solution(D3);
             foreach (var item in result){
-                Console.WriteLine("{0}:{1}",item.Key,item.Value);
+                 Console.Write("{0}:{1} ,",item.Key,item.Value);
+               
             }
             {
                 
