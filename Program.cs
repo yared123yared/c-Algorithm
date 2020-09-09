@@ -63,8 +63,11 @@ namespace c_sharp {
 
         public static void Main (string[] args) {
             var D = new Dictionary<string, int> () { { "2020-4-13", 1 }, { "2020-4-14", 4 }, { "2020-4-15", 9 }, { "2020-4-16", 2 }, { "2020-4-17", 3 }, { "2020-4-19", 1 }, { "2020-4-20", 1 } };
+            var D2 = new Dictionary<string, int> () { { "2020-4-15", 3 }, { "2020-4-10", 9 }, { "2020-4-16", 2 }, { "2020-4-17", 3 }, { "2020-4-19", 1 }, { "2020-4-20", 1 }, { "2020-4-21", 8 },{ "2020-4-22", 2 } };
+            var D3 = new Dictionary<string, int> () { { "2020-4-1", 3 }, { "2020-4-16", 3 }, { "2020-4-12", 5 }, { "2020-4-2", 1 }, { "2020-4-21", 8 },{ "2020-4-22", 2 },{ "2020-4-20", 1 }  };
+          
             //
-            var result=Solution(D);
+            var result=Solution(D3);
             foreach (var item in result){
                 Console.WriteLine("{0}:{1}",item.Key,item.Value);
             }
